@@ -39,7 +39,6 @@ The project utilizes specialized React hooks to separate rendering concerns from
 *   **Framework**: [React 19](https://react.dev)
 *   **Build Tool**: [Vite](https://vite.dev)
 *   **Styling Engine**: [Tailwind CSS](https://tailwindcss.com)
-*   **Icon Library**: [Lucide React](https://lucide.dev)
 
 ---
 
