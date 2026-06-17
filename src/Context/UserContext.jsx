@@ -1,4 +1,4 @@
-import {useContext, useState, createContext, useEffect} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 import {getTodayDateTime} from "../utils/dateHelper.js";
 
 const UserContext = createContext();
@@ -53,7 +53,7 @@ export function UserProvider({ children }) {
                 session_expires_at: Date.now() + 1800000,
             }
 
-            setCurrentUser((prevdata) => sessionData);
+            setCurrentUser(() => sessionData);
 
             return true;
         }
@@ -62,11 +62,11 @@ export function UserProvider({ children }) {
         }
     }
 
-    const isUserExists = (Id) => {
-        if(userDatabase.find(user => Number(user.id) === Number(Id))) {
-            return true;
-        }
-        return false;
+    const checkUserExistFromDetail = (userDetails) => {
+
+        return userDatabase.find((user) => {
+            return Object.entries(userDetails).every(([key, val]) => user[key] === val)
+        });
     }
 
     const isUserDeleted = (email) => {
@@ -116,7 +116,7 @@ export function UserProvider({ children }) {
 
     const updateUser = (updatedUser) => {
 
-        if (!isUserExists(updatedUser.id)) {
+        if (!checkUserExistFromDetail({id:updatedUser.id})) {
             return [false, "User does not exists"];
         }
 
@@ -135,7 +135,7 @@ export function UserProvider({ children }) {
 
     const deleteUser = (Id) => {
 
-        if (!isUserExists(Id)) {
+        if (!checkUserExistFromDetail({id:Id})) {
             return [false, "User does not exists"];
         }
 
@@ -161,8 +161,25 @@ export function UserProvider({ children }) {
         return [true, "User Logged Out Successfully!"]
     }
 
+    const resetPassword = (Id, password) => {
+        try {
+            setUserDatabase((prevUsers) => {
+                return prevUsers.map((user) =>
+                    Number(user.id) === Number(Id) ? {...user, password: password} : user
+                );
+            });
+        }
+        catch{
+            return [false, "Something went wrong! Please try again later"];
+        }
+
+        return [true, "User Password Updated Successfully!"];
+    }
+
     return (
-        <UserContext value={{currentUser,setCurrentUser, logInUser, logOutUser, addUser, updateUser, deleteUser}}>
+        <UserContext value={{currentUser, setCurrentUser, logInUser, logOutUser, addUser, updateUser, deleteUser,
+            checkUserExistFromDetail, resetPassword
+        }}>
             {children}
         </UserContext>
     )

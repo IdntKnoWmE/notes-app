@@ -1,5 +1,5 @@
 import React from 'react';
-import UserLoginModal from "../Modal/UserLoginModal.jsx";
+import UserLoginModal from "../Modal/UserLoginModal/UserLoginModal.jsx";
 import UserRegisterModal from "../Modal/UserRegisterModal.jsx";
 import {useModal} from "../Context/ModalContext.jsx";
 
