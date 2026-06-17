@@ -100,7 +100,7 @@ function UserLoginModal() {
 
                 <div className="flex gap-4 justify-center items-center">
                     <img className="w-11 h-11 sm:w-16 sm:h-16"
-                         src="notes_logo.png" alt="notes logo"/>
+                         src="/notes_logo.png" alt="notes logo"/>
                     <div className="text-[12px] sm:text-[27px] font-bold text-amber-800 underline">
                             My Notes App Registration
                     </div>
@@ -191,7 +191,7 @@ function UserLoginModal() {
                                     type="button"
                                     onClick={()=> setGender("Male")}
                                     className={`w-6 h-6 ring-1 sm:w-8 sm:h-8 sm:ring-3 
-                                                bg-[url('male.png')] bg-contain bg-center
+                                                bg-[url('/male.png')] bg-contain bg-center
                                                 rounded-full cursor-pointer
                                                 transition-all duration-200 ease-in-out 
                                                 hover:scale-110 active:scale-90 
@@ -203,7 +203,7 @@ function UserLoginModal() {
                                 type="button"
                                 onClick={()=> setGender("Female")}
                                 className={`w-7 h-7 ring-1 sm:w-9 sm:h-9 sm:ring-3
-                                                bg-[url('female.png')] bg-cover bg-center
+                                                bg-[url('/female.png')] bg-cover bg-center
                                                 rounded-full  cursor-pointer
                                                 transition-all duration-200 ease-in-out 
                                                 hover:scale-110 active:scale-90 
