@@ -247,8 +247,10 @@ function UserLoginModal() {
                 <div className="p-2 text-sm text-gray-700">
                     Already have an account?
                     <span onClick={() => switchToLogin("")}
-                          className="text-amber-800 font-bold text-base cursor-pointer pl-1">
-                        Login here
+                          className="inline-block text-amber-800 font-bold text-base cursor-pointer pl-1
+                                        transition-all duration-100 ease-out
+                                        hover:scale-105 active:scale-95">
+                        Sign in
                     </span>
                 </div>
             </div>
