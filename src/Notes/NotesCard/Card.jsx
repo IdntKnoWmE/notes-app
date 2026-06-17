@@ -22,7 +22,7 @@ function Card({note}) {
                                     transition-all duration-100 ease-in-out
                                     hover:scale-110 active:scale-90">
                     <img className={note.isFavourite?"w-7 h-7": "w-6 h-6"}
-                         src={note.isFavourite?"favourite.png": "not_favourite.png"} alt="favourite"/>
+                         src={note.isFavourite?"/favourite.png": "/not_favourite.png"} alt="favourite"/>
                 </button>
 
                 <button onClick={() => note.isDeleted? permanentDeleteNote(note.id):deleteNote(note.id)}
@@ -30,7 +30,7 @@ function Card({note}) {
                                     transition-all duration-100 ease-in-out
                                     hover:scale-110 active:scale-90">
                     <img className="w-7 h-7"
-                         src={note.isDeleted? "permanent_delete.png": "delete.png"} alt="delete"/>
+                         src={note.isDeleted? "/permanent_delete.png": "/delete.png"} alt="delete"/>
                 </button>
             </div>
             <div className="flex flex-col justify-between mt-1 h-[200px]">
@@ -50,7 +50,7 @@ function Card({note}) {
                                             transition-all duration-100 ease-in-out
                                             hover:scale-110 active:scale-90`}>
                         <img className={`${note.isDeleted? "w-8 h-8" : "w-4 h-4"} `}
-                             src={note.isDeleted? "restore.png": "notes_edit.png"} alt="notes_edit"/>
+                             src={note.isDeleted? "/restore.png": "/notes_edit.png"} alt="notes_edit"/>
                     </button>
                 </div>
             </div>

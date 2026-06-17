@@ -14,7 +14,7 @@ function Navbar() {
             <button className="cursor-pointer transition-all duration-100 ease-in-out hover:scale-110
                         active:scale-90">
                 <img className="w-12 h-12"
-                     src="notes_logo.png" alt="notes_add"/>
+                     src="/notes_logo.png" alt="notes_add"/>
             </button>
             <div className="flex flex-col justify-center gap-10 pb-50">
 
@@ -23,28 +23,28 @@ function Navbar() {
                         active:scale-90"
                 >
                     <img className="w-12 h-12"
-                         src="notes_add.png" alt="notes_add"/>
+                         src="/notes_add.png" alt="notes_add"/>
                 </button>
 
                 <button onClick={() => setCurrentFilterForNotes("all")}
                         className="cursor-pointer transition-all duration-100 ease-in-out hover:scale-110
                         active:scale-90">
                     <img className="w-12 h-12"
-                         src="all_notes.png" alt="all_notes"/>
+                         src="/all_notes.png" alt="all_notes"/>
                 </button>
 
                 <button onClick={() => setCurrentFilterForNotes("favourite")}
                         className="cursor-pointer transition-all duration-100 ease-in-out hover:scale-110
                         active:scale-90">
                     <img className="w-12 h-12"
-                         src="all_favourite.png" alt="all_favourite"/>
+                         src="/all_favourite.png" alt="all_favourite"/>
                 </button>
 
                 <button onClick={() => setCurrentFilterForNotes("deleted")}
                         className="cursor-pointer transition-all duration-100 ease-in-out hover:scale-110
                         active:scale-90">
                     <img className="w-12 h-12"
-                         src={getDeletedNotesCount() > 0 ? "full_trash.png": "empty_trash.png"}
+                         src={getDeletedNotesCount() > 0 ? "/full_trash.png": "/empty_trash.png"}
                          alt="trash"/>
                 </button>
 
@@ -54,7 +54,7 @@ function Navbar() {
                     className="cursor-pointer transition-all duration-100 ease-in-out hover:scale-110
                         active:scale-90">
                     <img className="w-12 h-12"
-                         src="notes_setting.png" alt="notes_add"/>
+                         src="/notes_setting.png" alt="notes_add"/>
                 </button>
             </div>
 

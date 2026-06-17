@@ -57,7 +57,7 @@ function UserLoginModal() {
 
                 <div>
                     <img className="w-16 h-16"
-                         src="notes_logo.png" alt="notes logo"/>
+                         src="/notes_logo.png" alt="notes logo"/>
                 </div>
 
                 <div className="flex flex-col justify-center">

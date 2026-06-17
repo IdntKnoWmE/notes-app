@@ -8,7 +8,7 @@ function UserAuth() {
     const {isLoginModalOpen, isRegisterModalOpen} = useModal();
 
     return (
-        <div className="w-full min-h-screen bg-[url('backgound-image.jpg')] bg-cover">
+        <div className="w-full min-h-screen bg-[url('/background.jpg')] bg-cover">
 
             {isLoginModalOpen? <UserLoginModal/> : null}
             {isRegisterModalOpen? <UserRegisterModal/> : null}

@@ -85,7 +85,7 @@ function NoteModal() {
                                     transition-all duration-100 ease-in-out
                                     hover:scale-110 active:scale-90">
                     <img className="w-10 h-10"
-                         src="close.png" alt="close_modal"/>
+                         src="/close.png" alt="close_modal"/>
                 </button>
             </div>
             <form onSubmit={handleNoteSubmit} className="flex flex-col gap-4 h-full">

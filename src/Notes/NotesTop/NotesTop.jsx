@@ -43,7 +43,7 @@ function NotesTop() {
             <div className="flex gap-4">
                 <div className="">
                     <img className="w-12 h-12"
-                         src={currentUser.user.gender === "Male"? "male.png" : "female.png"}
+                         src={currentUser.user.gender === "Male"? "/male.png" : "/female.png"}
                          alt="user avatar" />
                 </div>
                 <div className="flex flex-col justify-center">
@@ -66,13 +66,13 @@ function NotesTop() {
                     <button onClick={clearSearchQuery}>
                         <img className="w-6 h-6 mr-1 cursor-pointer
                                         transition-all duration-100 hover:scale-110 active:scale-90"
-                                 src="cross.png" alt="notes_add"/>
+                                 src="/cross.png" alt="notes_add"/>
                     </button>
                         )}
                     <button onClick={submitSearchQuery}>
                         <img className="w-6 h-6 mr-3 cursor-pointer
                                         transition-all duration-100 hover:scale-110 active:scale-90"
-                                 src="search.png" alt="notes_add"/>
+                                 src="/search.png" alt="notes_add"/>
                     </button>
                 </div>
                 {error && (
@@ -85,7 +85,7 @@ function NotesTop() {
                 <button onClick={userLoggingOut}>
                     <img className="w-9 h-9 mr-3 cursor-pointer mt-1
                                             transition-all duration-100 hover:scale-110 active:scale-90"
-                             src="user-logout.png" alt="user_logout"/>
+                             src="/user-logout.png" alt="user_logout"/>
                 </button>
             </div>
         </div>
